@@ -97,10 +97,10 @@ SpeedDatingFormat %b %d, %Y                     " Vim runtime files
 SpeedDatingFormat %^v
 SpeedDatingFormat %v
 " customized formats favoring / delimiter
-SpeedDatingFormat %Y/%m/%d%[ T_-.]%H:%M:%S %z
-SpeedDatingFormat %Y/%m/%d%[ T_-.]%H:%M:%S%?[Z]
-SpeedDatingFormat %Y/%m/%d%[ T_-.]%H:%M%z
-SpeedDatingFormat %Y/%m/%d%[ T_-.]%H:%M
+SpeedDatingFormat %Y/%m/%d%[ T_-]%H:%M:%S %z
+SpeedDatingFormat %Y/%m/%d%[ T_-]%H:%M:%S%?[Z]
+SpeedDatingFormat %Y/%m/%d%[ T_-]%H:%M%z
+SpeedDatingFormat %Y/%m/%d%[ T_-]%H:%M
 SpeedDatingFormat %Y/%m/%d
 
 " }}}1
