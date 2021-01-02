@@ -106,7 +106,7 @@ SpeedDatingFormat %^v
 " `a b c` (abc on different lines) visual selection, `g ctrl-a` turned them into
 " `b d f`. the incrementals are `1 2 3`, corresponding to the line number of
 " line offset. this may be useful, but is counter intuitive most of the time.
-SpeedDatingFormat %v
+" SpeedDatingFormat %v
 " customized formats favoring / delimiter
 SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M:%S %z
 SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M:%S%?[Z]
