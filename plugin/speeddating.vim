@@ -95,7 +95,24 @@ SpeedDatingFormat %d%[-/ ]%b%1%Y                " These three are common in the
 SpeedDatingFormat %Y %b %d                      " 'Last Change:' headers of
 SpeedDatingFormat %b %d, %Y                     " Vim runtime files
 SpeedDatingFormat %^v
-SpeedDatingFormat %v
+" the following increments roman numerals, but it unfortunately conflicts with
+" incrementing english letters, which is much more useful. so disable it. see
+" https://github.com/tpope/vim-speeddating/issues/19 for more details.
+" chrisbra in the discussion mentioned :h v_g_CTRL-A, however, that doesn't
+" solve the issue per my test. to have `g ctrl-a` to increment letters in visual
+" selection, I have to turn on `set nrformats+=alpha`, then to restore the
+" default vim behavior which I like, I have to turn it off `set nrformats-=alpha`.
+" this is already too compliated. plus, its behavior isn't linear. e.g., with
+" `a b c` (abc on different lines) visual selection, `g ctrl-a` turned them into
+" `b d f`. the incrementals are `1 2 3`, corresponding to the line number of
+" line offset. this may be useful, but is counter intuitive most of the time.
+" SpeedDatingFormat %v
+" customized formats favoring / delimiter
+SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M:%S %z
+SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M:%S%?[Z]
+SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M%z
+SpeedDatingFormat %Y/%m/%d%[. T_-]%H:%M
+SpeedDatingFormat %Y/%m/%d
 
 " }}}1
 
